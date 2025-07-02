@@ -2,8 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'rewards_screen.dart';
+import 'package:habithero/screens/challenge_detail_screen.dart';
 import '../models/challenge.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -133,18 +132,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(height: 20),
 
             /// 🏆 Rewards Button with accurate completed day count
-            ElevatedButton.icon(
-              onPressed: () {
-                Get.to(() =>
-                    RewardsScreen(totalDaysCompleted: totalCompletedDays));
-              },
-              icon: const Icon(Icons.emoji_events),
-              label: const Text("View Rewards"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurpleAccent,
-                foregroundColor: Colors.white,
-              ),
-            ),
           ],
         ),
       ),

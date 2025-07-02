@@ -23,6 +23,24 @@ class FirestoreService {
       }).toList();
     });
   }
+  Future<int> getTotalDaysCompleted() async {
+    final String? userId = FirebaseAuth.instance.currentUser?.uid;
+    if (userId == null) return 0;
+
+    final snapshot = await _challengeRef
+        .where('userId', isEqualTo: userId)
+        .get();
+
+    final challenges = snapshot.docs
+        .map((doc) => Challenge.fromMap(doc.id, doc.data() as Map<String, dynamic>))
+        .toList();
+
+    return challenges.fold<int>(
+      0,
+          (sum, c) => sum + c.progress.where((done) => done).length,
+    );
+  }
+
 
   /// Adds a challenge with the current user's userId
   Future<void> addChallenge(Challenge challenge) async {
