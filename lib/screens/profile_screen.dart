@@ -1,11 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:habithero/screens/challenge_detail_screen.dart';
 import '../models/challenge.dart';
+import '../widgets/custom_input_field.dart';
 
 class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
+
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
@@ -114,14 +115,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Column(
           children: [
             const SizedBox(height: 16),
-            _buildInput(_nameController, 'Name'),
+            CustomInputField(controller: _nameController, label: 'Name'),
             const SizedBox(height: 16),
-            _buildInput(_emailController, 'Email', readOnly: true),
+            CustomInputField(controller: _emailController, label: 'Email', readOnly: true),
             const SizedBox(height: 16),
-            _buildInput(_ageController, 'Age',
-                keyboardType: TextInputType.number),
+            CustomInputField(controller: _ageController, label: 'Age', keyboardType: TextInputType.number),
             const SizedBox(height: 16),
-            _buildInput(_locationController, 'Location'),
+            CustomInputField(controller: _locationController, label: 'Location'),
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: _saveProfile,
@@ -130,30 +130,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: const Text("Save", style: TextStyle(color: Colors.white)),
             ),
             const SizedBox(height: 20),
-
-            /// 🏆 Rewards Button with accurate completed day count
+            Text(
+              "Total Completed Days: $totalCompletedDays",
+              style: const TextStyle(color: Colors.white70),
+            ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildInput(TextEditingController controller, String label,
-      {bool readOnly = false,
-        TextInputType keyboardType = TextInputType.text}) {
-    return TextField(
-      controller: controller,
-      readOnly: readOnly,
-      keyboardType: keyboardType,
-      style: const TextStyle(color: Colors.white),
-      decoration: InputDecoration(
-        labelText: label,
-        labelStyle: const TextStyle(color: Colors.white),
-        filled: true,
-        fillColor: Colors.white10,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none,
         ),
       ),
     );
