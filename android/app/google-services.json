@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "564672519992",
+    "project_id": "habithero11",
+    "storage_bucket": "habithero11.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564672519992:android:5d75889f22fdc4b2366bcd",
+        "android_client_info": {
+          "package_name": "com.example.chattrix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564672519992-1q3igd1rm1gepbu0kglib4erfa382j42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1ydRo4VInukZqbDbtAE0GiHg0A6wVpYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564672519992-1q3igd1rm1gepbu0kglib4erfa382j42.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "564672519992-2kg5ibhppn1p6ni0srg8nsg9dk46lf91.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.habithero"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564672519992:android:2833cbaacd6f91fe366bcd",
+        "android_client_info": {
+          "package_name": "com.example.habit_hero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564672519992-1q3igd1rm1gepbu0kglib4erfa382j42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1ydRo4VInukZqbDbtAE0GiHg0A6wVpYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564672519992-1q3igd1rm1gepbu0kglib4erfa382j42.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "564672519992-2kg5ibhppn1p6ni0srg8nsg9dk46lf91.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.habithero"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564672519992:android:6903991b1900b84e366bcd",
+        "android_client_info": {
+          "package_name": "com.example.habithero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564672519992-1q3igd1rm1gepbu0kglib4erfa382j42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1ydRo4VInukZqbDbtAE0GiHg0A6wVpYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564672519992-1q3igd1rm1gepbu0kglib4erfa382j42.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "564672519992-2kg5ibhppn1p6ni0srg8nsg9dk46lf91.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.habithero"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
