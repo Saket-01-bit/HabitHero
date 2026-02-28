@@ -64,9 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
       title: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Hero(
-            tag: 'app-logo',
-              child: const Image(image: AssetImage('assets/logoo.png'), width: 40, height: 40)),
+          const Image(image: AssetImage('assets/logo.png'), width: 40, height: 40),
           const SizedBox(width: 8),
           Expanded(
             child: Column(

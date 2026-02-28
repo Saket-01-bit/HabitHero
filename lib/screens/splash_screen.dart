@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<void> _checkConnectivityAndNavigate() async {
     final result = await Connectivity().checkConnectivity();
 
-    await Future.delayed(const Duration(seconds: 2)); // Optional splash delay
+    await Future.delayed(const Duration(seconds: 2)); // Optional: splash delay
 
     if (!mounted) return;
 
@@ -36,26 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return const Scaffold(
       backgroundColor: Color(0xFF1E1E2C),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // App Logo
-            Hero(
-              tag: 'app-logo',
-              child: Image(
-                image: AssetImage('assets/logoo.png'),
-                width: 320,
-                height: 320,
-              ),
-            ),
-            SizedBox(height: 20),
-
-            // Progress Spinner
-            CircularProgressIndicator(
-              color: Colors.deepPurpleAccent,
-            ),
-          ],
-        ),
+        child: CircularProgressIndicator(color: Colors.deepPurpleAccent),
       ),
     );
   }
